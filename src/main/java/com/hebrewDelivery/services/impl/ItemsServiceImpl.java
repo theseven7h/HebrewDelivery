@@ -16,8 +16,7 @@ public class ItemsServiceImpl implements ItemsService {
     Items items;
     @Override
     public SendItemResponse sendItem(SendItemRequest sendItemRequest) {
-        Item item = new Item();
-        SendItemResponse sendItemResponse = map(sendItemRequest);
+        Item item = map(sendItemRequest);
         items.save(item);
         return null;
     }
